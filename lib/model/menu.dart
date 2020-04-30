@@ -1,3 +1,5 @@
+// https://sqirlla.com/menu/
+
 import 'dart:math';
 import 'food.dart';
 
@@ -13,7 +15,7 @@ class Menu {
         price: "\$10",
         description:
             "Market avocado, hot pickled carrots, garlic crème fraîche, house za’atar (V)",
-        reviews: ["excellent", "won't have it again."],
+        reviews: ["Ten", "Nine"],
         quantity: next(5, 10)),
     Food(
         id: "2",
@@ -22,7 +24,7 @@ class Menu {
         price: "\$12",
         description:
             "Buckwheat and cactus flour pancake, cocoa nibs pudding, toasted coconut, fresh fruit (V/GF)",
-        reviews: ["excellent", "won't have it again."],
+        reviews: ["Ten", "Nine", "Eight", "Four", "One"],
         quantity: next(5, 10)),
     Food(
         id: "3",
@@ -31,7 +33,13 @@ class Menu {
         price: "\$13",
         description:
             "Garden of romaine, prosciutto, castelvetrano olive, celery, lacto-fermented onion, creamy italian, herby breadcrumb, midnight moon  (VO/GFO)",
-        reviews: ["excellent", "won't have it again."],
+        reviews: [
+          "excellent",
+          "won't have it again.",
+          "delicious",
+          "two",
+          "three"
+        ],
         quantity: next(5, 10)),
     Food(
         id: "4",
@@ -40,7 +48,13 @@ class Menu {
         price: "\$12",
         description:
             "Crispy Kokuho Rose brown rice salad with mint, cilantro, cucumber, scallion, lacto-fermented hot sauce, fried egg  (V/GF)",
-        reviews: ["excellent", "won't have it again."],
+        reviews: [
+          "excellent",
+          "won't have it again.",
+          "delicious",
+          "two",
+          "three"
+        ],
         quantity: next(15, 30)),
     Food(
         id: "5",
@@ -49,7 +63,13 @@ class Menu {
         price: "\$14.5",
         description:
             "Weiser potato, Old Bay sprouting cauliflower, leeks, green garlic persillade, fried egg, shu greens (V/VO/GF)",
-        reviews: ["excellent", "won't have it again."],
+        reviews: [
+          "excellent",
+          "won't have it again.",
+          "delicious",
+          "two",
+          "three"
+        ],
         quantity: next(1, 5)),
     Food(
         id: "6",
@@ -58,7 +78,7 @@ class Menu {
         price: "\$10",
         description:
             "Kale marinated in mustard vinaigrette, sorrel pesto, preserved meyer lemon, lacto-fermented hot sauce, watermelon radish, french Sheep feta, poached egg (V/GF)",
-        reviews: ["excellent", "won't have it again."],
+        reviews: ["Ten", "Nine", "Eight", "Four", "One"],
         quantity: next(5, 10)),
     Food(
         id: "7",
@@ -66,7 +86,7 @@ class Menu {
         name: "Jamon Pepín",
         price: "\$14",
         description: "House ham, comté, beurre de baratte butter, mustard",
-        reviews: ["excellent", "won't have it again."],
+        reviews: ["Ten", "Nine", "Eight", "Four", "One"],
         quantity: next(5, 10)),
     Food(
         id: "8",
@@ -75,7 +95,7 @@ class Menu {
         price: "\$9",
         description:
             "Brioche toast w/ house ricotta, and choice of seasonal jam (shown 'rainbow') (V)",
-        reviews: ["excellent", "won't have it again."],
+        reviews: ["Ten", "Nine", "Eight", "Four", "One"],
         quantity: next(5, 10)),
     Food(
         id: "9",
@@ -84,7 +104,7 @@ class Menu {
         price: "\$9",
         description:
             "Kokuho Rose brown rice, sorrel pesto (nut free), preserved meyer lemon, lacto-fermented hot sauce, watermelon radish, french sheep feta, poached egg  (V/GF)",
-        reviews: ["excellent", "won't have it again."],
+        reviews: ["Ten", "Nine"],
         quantity: next(5, 10)),
     Food(
         id: "10",
@@ -93,7 +113,13 @@ class Menu {
         price: "\$16",
         description:
             "Pastrami spiced yuba (organic non-GMO tofu skin from Hodo), fermented jimmy nardello russian dressing *contains cashews*, bread & butter pickles, sauerkraut, Bub's rye (this is a vegetarian sandwich and can be made vegan) (V/VO)",
-        reviews: ["excellent", "won't have it again."],
+        reviews: [
+          "excellent",
+          "won't have it again.",
+          "wonderful",
+          "tasty",
+          "8"
+        ],
         quantity: next(5, 10)),
   ];
 

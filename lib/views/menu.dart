@@ -62,12 +62,13 @@ class _MenuViewState extends State<MenuView> {
         title: Text("Menu View"),
       ),
       body: Center(
+          child: new SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
             Container(
-              width: 440,
+              width: 360,
               // height: 440,
               child: Card(
                 margin: EdgeInsets.all(10.0),
@@ -88,6 +89,8 @@ class _MenuViewState extends State<MenuView> {
                         child: Padding(
                           padding: const EdgeInsets.only(top: 0.0),
                           child: Container(
+                            height: 400,
+                            width: 360,
                             // color: Colors.pink,
                             child: FittedBox(
                               child: Image(
@@ -111,7 +114,8 @@ class _MenuViewState extends State<MenuView> {
                               fontWeight: FontWeight.w800,
                               letterSpacing: 5,
                               color: Colors.lightGreen[900],
-                              fontSize: MediaQuery.of(context).size.width / 20,
+                              fontSize:
+                                  24, // MediaQuery.of(context).size.width / 20,
                             )),
                       ),
                     ],
@@ -121,11 +125,11 @@ class _MenuViewState extends State<MenuView> {
             ),
           ],
         ),
-      ),
+      )),
       floatingActionButton: Stack(children: <Widget>[
         Positioned(
-          bottom: 20.0,
-          left: MediaQuery.of(context).size.width * .25,
+          top: MediaQuery.of(context).size.height / 2,
+          left: 50,
           child: FloatingActionButton(
             heroTag: 'increase',
             onPressed: () {
@@ -138,8 +142,8 @@ class _MenuViewState extends State<MenuView> {
           ),
         ),
         Positioned(
-          bottom: 20.0,
-          right: MediaQuery.of(context).size.width * .25 - 30,
+          top: MediaQuery.of(context).size.height / 2,
+          right: 20,
           child: FloatingActionButton(
             heroTag: 'decrease',
             onPressed: () {

@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'comments.dart';
 import '../model/food.dart';
 import '../model/menu.dart';
 
@@ -17,6 +18,7 @@ class DetailsView extends StatelessWidget {
         title: Text("Details View"),
       ),
       body: Center(
+          child: new SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
@@ -43,7 +45,7 @@ class DetailsView extends StatelessWidget {
                   child: ClipRRect(
                     // make sure we apply clip it properly
                     child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaX: 0, sigmaY: 0),
+                      filter: ImageFilter.blur(sigmaX: 0.5, sigmaY: 0.5),
                       child: Container(
                         alignment: Alignment.bottomCenter,
                         color: Color(0x254CAF50),
@@ -109,32 +111,34 @@ class DetailsView extends StatelessWidget {
             ),
             Container(
               width: 360,
-              height: 200,
-              child: Card(
+              height: 300,
+              child: Container(
                 margin: EdgeInsets.all(10.0),
-                color: Color(0xAA4CAF50),
-                elevation: 10.0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0),
-                ),
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(24.0, 0, 24.0, 0),
-                    child: Text(food.reviews[1],
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                          // fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 16,
-                        )),
-                  ),
-                ),
+                color: Colors.transparent,
+                //color: Color(0xAA4CAF50),
+                //elevation: 10.0,
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(15.0),
+                // ),
+                child: new CommentsView(comments: food.reviews),
+                // Center(
+                //   child: Padding(
+                //     padding: const EdgeInsets.fromLTRB(24.0, 0, 24.0, 0),
+                //     child: Text(food.reviews[1],
+                //         textAlign: TextAlign.center,
+                //         style: TextStyle(
+                //           fontStyle: FontStyle.italic,
+                //           // fontWeight: FontWeight.bold,
+                //           color: Colors.grey[200],
+                //           fontSize: 16,
+                //         )),
+                //   ),
+                // ),
               ),
             ),
           ],
         ),
-      ),
+      )),
     );
   }
 }
